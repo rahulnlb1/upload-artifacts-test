@@ -9,6 +9,7 @@ pipelines:
     steps:
       - name: EXT_S_SYC_AU_0025
         type: UploadArtifact
+        syntaxVerion: 1.0.0
         configuration:
           targetPath: "test-automation-generic-local/EXT_S_SYC_AU_0025"
           integrations:
