@@ -11,7 +11,7 @@ pipelines:
         type: UploadArtifact
         syntaxVersion: 1.0.0
         configuration:
-          targetPath: "test-automation-generic-local/EXT_S_SYC_AU_0025"
+          targetPath: "pipelines_1619190832/EXT_S_SYC_AU_0025"
           integrations:
             - name: s_artifactory
           inputResources:
