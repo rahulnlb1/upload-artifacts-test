@@ -9,7 +9,6 @@ pipelines:
     steps:
       - name: EXT_S_SYC_AU_0025
         type: UploadArtifact
-        syntaxVersion: 1.0.0
         configuration:
           targetPath: "pipelines_1619190832/EXT_S_SYC_AU_0025"
           integrations:
