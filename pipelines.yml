@@ -3,7 +3,7 @@ resources:
     type: FileSpec
     configuration:
       sourceArtifactory: s_artifactory
-      pattern: "test-automation-generic-local/test.txt"
+      pattern: "pipelines_1619190832/test.txt"
 pipelines:
   - name: EXT_S_SYC_AU_0025
     steps:
