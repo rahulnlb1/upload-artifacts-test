@@ -18,4 +18,4 @@ pipelines:
         execution:
           onExecute:
             - echo "${run_id}" > TEST_fileSpec.txt
-            - jfrog rt upload TEST_fileSpec.txt test-automation-generic-local
+            - jfrog rt upload TEST_fileSpec.txt test-automation-generic-local --detailed-summary=true
