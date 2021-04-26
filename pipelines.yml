@@ -1,17 +1,21 @@
 resources:
-  - name: EXT_S_SYC_AU_0025_fileSpec
+  - name: TEST_fileSpec
     type: FileSpec
     configuration:
       sourceArtifactory: s_artifactory
-      pattern: "pipelines_1619190832/test.txt"
+      pattern: "test-automation-generic-local/TEST_fileSpec.txt"
+
 pipelines:
-  - name: EXT_S_SYC_AU_0025
+  - name: pipeline_TEST
     steps:
-      - name: EXT_S_SYC_AU_0025
-        type: UploadArtifact
+      - name: TEST
+        type: Bash
         configuration:
-          targetPath: "pipelines_1619190832/EXT_S_SYC_AU_0025"
           integrations:
             - name: s_artifactory
-          inputResources:
-            - name: EXT_S_SYC_AU_0025_fileSpec
+          outputResources:
+            - name: TEST_fileSpec
+        execution:
+          onExecute:
+            - echo "${run_id}" > TEST_fileSpec.txt
+            - jfrog rt upload TEST_fileSpec.txt test-automation-generic-local
